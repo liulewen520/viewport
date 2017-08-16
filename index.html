@@ -2,9 +2,45 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>  
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> 
 		<title></title>
 	</head>
 	<body>
-		
+		<div>
+		    <p>
+		        变量 变量允许我们单独定义一系列通用的样式，然后在需要的时候去调用。所以在做全局样式调整的时候我们可能只需要修改几行代码就可以了。 // LESS @color: #4D926F; #header { color: @color; } h2 { color: @color; } /* 生成的 CSS */ #header { color: #4D926F; } h2 { color: #4D926F; } 混合 混合可以将一个定义好的class A轻松的引入到另一个class B中，从而简单实现class B继承class A中的所有属性。我们还可以带参数地调用，就像使用函数一样。 // LESS .rounded-corners (@radius: 5px) { border-radius: @radius; -webkit-border-radius: @radius; -moz-border-radius: @radius; } #header { .rounded-corners; } #footer { .rounded-corners(10px); } /* 生成的 CSS */ #header { border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; } #footer { border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; } 嵌套规则 我们可以在一个选择器中嵌套另一个选择器来实现继承，这样很大程度减少了代码量，并且代码看起来更加的清晰。 // LESS #header { h1 { font-size: 26px; font-weight: bold; } p { font-size: 12px; a { text-decoration: none; &:hover { border-width: 1px } } } } /* 生成的 CSS */ #header h1 { font-size: 26px; font-weight: bold; } #header p { font-size: 12px; } #header p a { text-decoration: none; } #header p a:hover { border-width: 1px; } 函数 & 运算 运算提供了加，减，乘，除操作；我们可以做属性值和颜色的运算，这样就可以实现属性值之间的
+		    </p>
+		</div>
+<!--		
+	Css3-3
+多列：
+column-count：设置列的个数 可以把一行文字分割成设置的列的个数。 如果设置了列的宽度 当列的最小宽度和 不够总宽度的时候 列的数量就会缩小
+Column-width:可以设置列的最小宽度  
+Column-span:设置列的横跨数量 （常用于设置标题）
+column-rule：设置分隔线 设置方式 与边框的设置方式一样 是一个复合属性
+column-gap:设置列的间距
+
+单位：rem px em 百分比 pt
+em: 也是一个类似百分比的单位 相对于父元素字号 的比例
+rem：对于根元素 字号 的比例  根18号字  =  1rem    
+->   1.可以让比较小的屏幕 展示更多内容 并且可以按照屏幕的宽度来设置字号（小屏幕设置小字号 大的设置大字号）
+->   2.如果所有的宽高字号 都用rem表示 所有的内容展示的宽高字号 都是响应式的
+
+媒体查询
+@media (mix-width:600px) and or 其他条件{满足这个条件下的样式}
+视口：用于设置移动端 显示内容窗口的配置
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+处理媒体查询不支持的方式
+1.加载处理不兼容的脚本文件
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js 
+
+"></script>  
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js 
+
+"></script> 
+2.更改IE浏览器渲染内容时 使用的内核 
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">  -->
 	</body>
 </html>
